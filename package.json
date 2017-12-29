@@ -1,0 +1,17 @@
+{
+  "name": "xpress",
+  "version": "0.5.0",
+  "license": "MIT",
+  "scripts": {},
+  "private": true,
+  "dependencies": {
+    "body-parser": "^1.18.2",
+    "express": "^4.16.2",
+    "express-jwt": "^5.3.0",
+    "jsonwebtoken": "^8.1.0",
+    "jwks-rsa": "^1.2.1",
+    "mongodb": "^2.2.33",
+  },
+  "devDependencies": {},
+  "peerDependencies": {}
+}
