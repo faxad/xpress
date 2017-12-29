@@ -1,4 +1,4 @@
-
+An implementation of RESTful web services.
 
 ### Technology Stack
 - Node JS
@@ -13,7 +13,7 @@ Create a `.env` file in the root directory and set the following environment var
 DB_HOST=<mongo db connection string>
 SECRET=<auth. secret>
 PORT=<port>
-LOGGER_LEVEL=error
-LOGGER_LEVEL=true
+LOGGER_LEVEL=info
+LOGGER_ENABLED=true
 ENV=dev
 ```

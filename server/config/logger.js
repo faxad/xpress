@@ -9,7 +9,7 @@ const schema = joi.object({
     .default('info'),
   LOGGER_ENABLED: joi.boolean()
     .truthy('true')
-    .falsy('FALSE')
+    .falsy('false')
     .default(true)
 }).unknown().required()
 
