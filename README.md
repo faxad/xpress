@@ -1,6 +1,11 @@
 
 
-Usgae:**
+### Technology Stack
+- Node JS
+- Express
+- MongoDB
+
+### Usage & Configuration
 
 Create a `.env` file in the root directory and set the following environment variables
 
