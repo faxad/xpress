@@ -17,3 +17,11 @@ LOGGER_LEVEL=info
 LOGGER_ENABLED=true
 ENV=dev
 ```
+
+### Documentation
+
+Execute the following to generate API documentation
+
+```dosini
+apidoc -i ./server/controllers -o docs/
+```
