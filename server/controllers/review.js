@@ -4,7 +4,38 @@ var ObjectID = mongodb.ObjectID
 const repository = require('./repository')
 
 /**
- * ITEM/PRODUCT REVIEW (POST) - Handles creation of product's review
+ * Handles creation of product's review
+ * 
+ * @api {post} /review Add
+ * @apiHeader {String="Bearer :token"} Authorization Replace <code>:token</code> with Auth Token
+ * @apiName AddItemReview
+ * @apiGroup Review
+ * 
+ * @apiParam {String}  userId     Name of the product.
+ * @apiParam {Mongoid} itemId     Identifier for the product.
+ * @apiParam {Number}  rating     Price of the product.
+ * @apiParam {Date}    reviewDate Number of items in stock.
+ * @apiParam {String}  remarks    Date of release.
+ * 
+ * @apiSuccess {Mongoid} _id        Identifier for the review.
+ * @apiSuccess {String}  userId     Identifier for the user.
+ * @apiSuccess {Mongoid} itemId     Identifier for the product.
+ * @apiSuccess {Number}  rating     Price of the product.
+ * @apiSuccess {Date}    reviewDate Date of review.
+ * @apiSuccess {String}  remarks    Comments made by user.
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 201 OK
+ *     {
+ *       "_id": "5a1aa5679dd67514586f5d7a",
+ *       "userId": "john.doe",
+ *       "itemId": "6a1aa5679xd67513586g5d2u",
+ *       "rating": 4,
+ *       "reviewDate": "December 20, 2017",
+ *       "remarks": "sample remarks"
+ *      }
+ * 
+ * @apiSampleRequest http://localhost:8000/review/
  */
 module.exports.addItemReview = (req, res) => {
   document =  {
@@ -19,7 +50,19 @@ module.exports.addItemReview = (req, res) => {
 }
 
 /**
- * DELETE ITEM/PRODUCT REVIEW - Handles removing user review
+ * Handles removing user review
+ * 
+ * @api {delete} /review/:reviewId Remove
+ * @apiHeader {String="Bearer :token"} Authorization Replace <code>:token</code> with Auth Token
+ * @apiName DeleteReview
+ * @apiGroup Review
+ * 
+ * @apiParam (Route Parameters) {Mongoid} reviewId Identifier of the review.
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 204 OK
+ * 
+ * @apiSampleRequest http://localhost:8000/review/
  */
 module.exports.deleteReview = (req, res) => {
   condition = {
@@ -30,7 +73,39 @@ module.exports.deleteReview = (req, res) => {
 }
 
 /**
- * UPDATE ITEM/PRODUCT REVIEW - Handles modification of user review
+ * Handles modification of user review
+ * 
+ * @api {put} /review Modify
+ * @apiHeader {String="Bearer :token"} Authorization Replace <code>:token</code> with Auth Token
+ * @apiName UpdateReview
+ * @apiGroup Review
+ * 
+ * @apiParam {Mongoid} _id        Identifier for the review.
+ * @apiParam {String}  userId     Identifier for the user.
+ * @apiParam {Mongoid} itemId     Identifier for the product.
+ * @apiParam {Number}  rating     Price of the product.
+ * @apiParam {Date}    reviewDate Date of review.
+ * @apiParam {String}  remarks    Comments made by user.
+ *  
+ * @apiSuccess {Mongoid} _id        Identifier for the review.
+ * @apiSuccess {String}  userId     Identifier for the user.
+ * @apiSuccess {Mongoid} itemId     Identifier for the product.
+ * @apiSuccess {Number}  rating     Price of the product.
+ * @apiSuccess {Date}    reviewDate Date of review.
+ * @apiSuccess {String}  remarks    Comments made by user.
+ *
+ * @apiSuccessExample Success-Response:
+ *     HTTP/1.1 200 OK
+ *     {
+ *       "_id": "5a1aa5679dd67514586f5d7a",
+ *       "userId": "john.doe",
+ *       "itemId": "6a1aa5679xd67513586g5d2u",
+ *       "rating": 4,
+ *       "reviewDate": "December 20, 2017",
+ *       "remarks": "sample remarks"
+ *      }
+ * 
+ * @apiSampleRequest http://localhost:8000/review/
  */
 module.exports.updateReview = (req, res) => {
   condition = {

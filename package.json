@@ -21,14 +21,15 @@
     "pre-commit": "1.2.2"
   },
   "dependencies": {
+    "apidoc": "^0.17.6",
+    "body-parser": "1.18.2",
     "dotenv": "4.0.0",
-    "joi": "13.0.2",
-    "winston": "2.4.0",
     "express": "4.16.2",
     "express-jwt": "5.3.0",
-    "body-parser": "1.18.2",
+    "joi": "13.0.2",
+    "jsonwebtoken": "8.1.0",
     "mongodb": "2.2.33",
-    "jsonwebtoken": "8.1.0"
+    "winston": "2.4.0"
   },
   "pre-commit": [
     "lint"
