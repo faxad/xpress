@@ -35,7 +35,7 @@ const repository = require('./repository')
  *       "remarks": "sample remarks"
  *      }
  * 
- * @apiSampleRequest http://localhost:8000/review/
+ * @apiSampleRequest /review
  */
 module.exports.addItemReview = (req, res) => {
   document =  {
@@ -62,7 +62,7 @@ module.exports.addItemReview = (req, res) => {
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 204 OK
  * 
- * @apiSampleRequest http://localhost:8000/review/
+ * @apiSampleRequest /review
  */
 module.exports.deleteReview = (req, res) => {
   condition = {
@@ -105,7 +105,7 @@ module.exports.deleteReview = (req, res) => {
  *       "remarks": "sample remarks"
  *      }
  * 
- * @apiSampleRequest http://localhost:8000/review/
+ * @apiSampleRequest /review
  */
 module.exports.updateReview = (req, res) => {
   condition = {

@@ -32,7 +32,7 @@ const repository = require('./repository')
  *       }
  *     ]
  * 
- * @apiSampleRequest http://localhost:8000/cart/:username
+ * @apiSampleRequest /cart/:username
  */
 module.exports.getCartItems = (req, res) => {
   repository.getCartItems(req, res);
@@ -64,7 +64,7 @@ module.exports.getCartItems = (req, res) => {
  *       "quantity": 1
  *     }
  * 
- * @apiSampleRequest http://localhost:8000/cart/
+ * @apiSampleRequest /cart
  */
 module.exports.addItemToCart = (req, res) => {
   document =  {
@@ -103,7 +103,7 @@ module.exports.addItemToCart = (req, res) => {
  *       "quantity": 2
  *      }
  * 
- * @apiSampleRequest http://localhost:8000/cart/
+ * @apiSampleRequest /cart
  */
 module.exports.updateCartItem = (req, res) => {
   condition = {
@@ -133,7 +133,7 @@ module.exports.updateCartItem = (req, res) => {
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 204 OK
  * 
- * @apiSampleRequest http://localhost:8000/cart/
+ * @apiSampleRequest /cart
  */
 module.exports.deleteCartItem = (req, res) => {
   condition = {

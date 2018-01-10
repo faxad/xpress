@@ -40,7 +40,7 @@ const repository = require('./repository')
  *        }
  *      ]
  * 
- * @apiSampleRequest http://localhost:8000/inventory
+ * @apiSampleRequest /inventory
  */
 module.exports.getItems = (req, res) => {
   repository.getItems(req, res);
@@ -86,7 +86,7 @@ module.exports.getItems = (req, res) => {
  *        }
  *      ]
  * 
- * @apiSampleRequest http://localhost:8000/inventory/:username
+ * @apiSampleRequest /inventory/:username
  */
 module.exports.getItemsForUser = (req, res) => {
   repository.getItemsForUser(req, res)
@@ -138,7 +138,7 @@ module.exports.getItemsForUser = (req, res) => {
  *        "reviewsCount": 5
  *      } 
  * 
- * @apiSampleRequest http://localhost:8000/inventory/:itemId/detail
+ * @apiSampleRequest /inventory/:itemId/detail
  */
 module.exports.getItemDetail = (req, res) => {
   repository.getItemDetail(req, res)
@@ -185,7 +185,7 @@ module.exports.getItemDetail = (req, res) => {
  *       "imageUrl": null
  *      }
  * 
- * @apiSampleRequest http://localhost:8000/inventory/
+ * @apiSampleRequest /inventory
  */
 module.exports.createItem = (req, res) => {
   document =  {
@@ -244,7 +244,7 @@ module.exports.createItem = (req, res) => {
  *       "imageUrl": null
  *      }
  * 
- * @apiSampleRequest http://localhost:8000/inventory/
+ * @apiSampleRequest /inventory
  */
 module.exports.updateItem = (req, res) => {
   condition = {
@@ -276,7 +276,7 @@ module.exports.updateItem = (req, res) => {
  * @apiSuccessExample Success-Response:
  *     HTTP/1.1 204 OK
  * 
- * @apiSampleRequest http://localhost:8000/inventory/
+ * @apiSampleRequest /inventory
  */
 module.exports.deleteItem = (req, res) => {
   condition = {

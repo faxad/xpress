@@ -28,7 +28,7 @@ const secret = config.auth.secret;
  *       "error": "InvalidUserOrPass"
  *     }
  *
- * @apiSampleRequest http://localhost:8000/login
+ * @apiSampleRequest /login
  */
 module.exports.logIn = (req, res) => {
   // TODO: replace with actual implementation
