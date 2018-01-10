@@ -4,6 +4,7 @@ An implementation of RESTful web services.
 - Node JS
 - Express
 - MongoDB
+- Red Hat OpenShift 
 
 ### Usage & Configuration
 
@@ -17,11 +18,24 @@ LOGGER_LEVEL=info
 LOGGER_ENABLED=true
 ENV=dev
 ```
+### Interactive Demo & Documentation
 
-### Documentation
+https://faxad.github.io/xpress
+
+
+### Generate Documentation
+
+Configure API Server address in *package.json*
+
+```json
+"apidoc": {
+    "url" : "<API_SERVER_ADDRESS>",
+    "sampleUrl": "API_SERVER_ADDRESS"
+  },
+```
 
 Execute the following to generate API documentation
 
-```dosini
+```node
 apidoc -i ./server/controllers -o docs/
 ```
