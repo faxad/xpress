@@ -32,10 +32,13 @@ const secret = config.auth.secret;
  */
 module.exports.logIn = (req, res) => {
   // TODO: replace with actual implementation
+  const scope =  (req.body.username === 'admin') ? ['admin'] : ['user']
+
   if (true) {
     var jwtBearerToken = jwt.sign(
       {
-        userId: '101010110101'
+        userId: '101010110101',
+        scope
       },
       secret,
       {
