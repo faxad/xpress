@@ -3,7 +3,8 @@
 const joi = require('joi')
 
 const schema = joi.object({
-  PORT: joi.number()
+  PORT: joi.number(),
+  IP: joi.string()
 }).unknown().required()
 
 const { error, value: envVars } = joi.validate(process.env, schema)
@@ -13,7 +14,8 @@ if (error) {
 
 const config = {
   server: {
-    port: envVars.PORT
+    port: envVars.PORT,
+    ip: envVars.IP
   }
 }
 
