@@ -8,8 +8,8 @@
     "lint": "eslint ."
   },
   "apidoc": {
-    "url" : "http://xpress-xpress-api.7e14.starter-us-west-2.openshiftapps.com",
-    "sampleUrl": "http://xpress-xpress-api.7e14.starter-us-west-2.openshiftapps.com"
+    "url" : "https://secure-xpress-api.7e14.starter-us-west-2.openshiftapps.com",
+    "sampleUrl": "https://secure-xpress-api.7e14.starter-us-west-2.openshiftapps.com"
   },
   "author": "Fawad H Qureshi",
   "license": "MIT",
