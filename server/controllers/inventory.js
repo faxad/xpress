@@ -18,6 +18,7 @@ const repository = require('./repository')
  * @apiSuccess {Number}  unitPrice       Price of the product.
  * @apiSuccess {Number}  quantityInStock Number of items in stock.
  * @apiSuccess {Date}    releaseDate     Date of release.
+ * @apiSuccess {String}  category        Category of product.
  * @apiSuccess {String}  description     Brief description of the product.
  * @apiSuccess {Number}  rating          Customer rating of the product.
  * @apiSuccess {String}  imageUrl        URL for the product image.
@@ -33,6 +34,7 @@ const repository = require('./repository')
  *         "unitPrice": "50",
  *         "quantityInStock": "5",
  *         "releaseDate": null,
+ *         "category": foo,
  *         "description": "desc of item",
  *         "rating": null,
  *         "imageUrl": null,
@@ -63,6 +65,7 @@ module.exports.getItems = (req, res) => {
  * @apiSuccess {Number}  quantityInStock Number of items in stock.
  * @apiSuccess {Date}    releaseDate     Date of release.
  * @apiSuccess {String}  description     Brief description of the product.
+ * @apiSuccess {String}  category        Category of product.
  * @apiSuccess {Number}  rating          Customer rating of the product.
  * @apiSuccess {String}  imageUrl        URL for the product image.
  * @apiSuccess {Number}  reviewsCount    Number of reviews submitted by users.
@@ -78,6 +81,7 @@ module.exports.getItems = (req, res) => {
  *         "unitPrice": "50",
  *         "quantityInStock": "5",
  *         "releaseDate": null,
+ *         "category": foo,
  *         "description": "desc of item",
  *         "rating": null,
  *         "imageUrl": null,
@@ -108,6 +112,7 @@ module.exports.getItemsForUser = (req, res) => {
  * @apiSuccess {Number}  quantityInStock Number of items in stock.
  * @apiSuccess {Date}    releaseDate     Date of release.
  * @apiSuccess {String}  description     Brief description of the product.
+ * @apiSuccess {String}  category        Category of product.
  * @apiSuccess {Number}  rating          Customer rating of the product.
  * @apiSuccess {String}  imageUrl        URL for the product image.
  * @apiSuccess {JSON}    reviews         Customer reviews for the product.
@@ -122,6 +127,7 @@ module.exports.getItemsForUser = (req, res) => {
  *        "unitPrice": "23",
  *        "quantityInStock": "5",
  *        "releaseDate": null,
+ *        "category": foo,
  *        "description": "desc for P1 goes here (updated)",
  *        "rating": null,
  *        "imageUrl": null,
@@ -157,6 +163,7 @@ module.exports.getItemDetail = (req, res) => {
  * @apiParam {Number}  unitPrice       Price of the product.
  * @apiParam {Number}  quantityInStock Number of items in stock.
  * @apiParam {Date}    releaseDate     Date of release.
+ * @apiParam {String}  category        Category of product.
  * @apiParam {String}  description     Brief description of the product.
  * @apiParam {Number}  rating          Customer rating of the product.
  * @apiParam {String}  imageUrl        URL for the product image.
@@ -167,6 +174,7 @@ module.exports.getItemDetail = (req, res) => {
  * @apiSuccess {Number}  unitPrice       Price of the product.
  * @apiSuccess {Number}  quantityInStock Number of items in stock.
  * @apiSuccess {Date}    releaseDate     Date of release.
+ * @apiSuccess {String}  category        Category of product.
  * @apiSuccess {String}  description     Brief description of the product.
  * @apiSuccess {Number}  rating          Customer rating of the product.
  * @apiSuccess {String}  imageUrl        URL for the product image.
@@ -180,6 +188,7 @@ module.exports.getItemDetail = (req, res) => {
  *       "unitPrice": "50",
  *       "quantityInStock": "5",
  *       "releaseDate": null,
+ *       "category": foo,
  *       "description": "desc of item",
  *       "rating": null,
  *       "imageUrl": null
@@ -194,6 +203,7 @@ module.exports.createItem = (req, res) => {
     unitPrice: req.body.unitPrice,
     quantityInStock: req.body.quantityInStock,
     releaseDate: req.body.releaseDate,
+    category: req.body.category,
     description: req.body.description,
     rating: req.body.rating,
     imageUrl: req.body.imageUrl
@@ -216,6 +226,7 @@ module.exports.createItem = (req, res) => {
  * @apiParam {Number}   unitPrice       Price of the product.
  * @apiParam {Number}   quantityInStock Number of items in stock.
  * @apiParam {Date}     releaseDate     Date of release.
+ * @apiParam {String}  category        Category of product.
  * @apiParam {String}   description     Brief description of the product.
  * @apiParam {Number}   rating          Customer rating of the product.
  * @apiParam {String}   imageUrl        URL for the product image.
@@ -226,6 +237,7 @@ module.exports.createItem = (req, res) => {
  * @apiSuccess {Number}  unitPrice       Price of the product.
  * @apiSuccess {Number}  quantityInStock Number of items in stock.
  * @apiSuccess {Date}    releaseDate     Date of release.
+ * @apiSuccess {String}  category        Category of product.
  * @apiSuccess {String}  description     Brief description of the product.
  * @apiSuccess {Number}  rating          Customer rating of the product.
  * @apiSuccess {String}  imageUrl        URL for the product image.
@@ -239,6 +251,7 @@ module.exports.createItem = (req, res) => {
  *       "unitPrice": "50",
  *       "quantityInStock": "5",
  *       "releaseDate": null,
+ *       "category": foo,
  *       "description": "desc of item",
  *       "rating": null,
  *       "imageUrl": null
@@ -257,6 +270,7 @@ module.exports.updateItem = (req, res) => {
     unitPrice: req.body.unitPrice,
     quantityInStock: req.body.quantityInStock,
     releaseDate: req.body.releaseDate,
+    category: req.body.category,
     description: req.body.description,
   }
 
