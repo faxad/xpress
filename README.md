@@ -27,8 +27,8 @@ https://faxad.github.io/xpress
 
 Configure API Server address in *package.json*
 
-```json
-"apidoc": {
+```
+apidoc: {
     url : <API_SERVER_ADDRESS>,
     sampleUrl: <API_SERVER_ADDRESS>
   },
