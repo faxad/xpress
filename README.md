@@ -1,4 +1,4 @@
-An implementation of RESTful web services.
+An implementation of ReSTful web services.
 
 ### Technology Stack
 - Node JS
@@ -11,9 +11,9 @@ An implementation of RESTful web services.
 Create a `.env` file in the root directory and set the following environment variables
 
 ```dosini
-DB_HOST=<mongo db connection string>
-SECRET=<auth. secret>
-PORT=<port>
+DB_HOST=<MONGO_CONNECTION_STRING>
+SECRET=<AUTH_SECRET>
+PORT=<PORT>
 LOGGER_LEVEL=info
 LOGGER_ENABLED=true
 ENV=dev
@@ -29,8 +29,8 @@ Configure API Server address in *package.json*
 
 ```json
 "apidoc": {
-    "url" : "<API_SERVER_ADDRESS>",
-    "sampleUrl": "API_SERVER_ADDRESS"
+    url : <API_SERVER_ADDRESS>,
+    sampleUrl: <API_SERVER_ADDRESS>
   },
 ```
 
