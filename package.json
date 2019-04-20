@@ -25,7 +25,7 @@
     "pre-commit": "1.2.2"
   },
   "dependencies": {
-    "apidoc": "^0.17.6",
+    "apidoc": "^0.17.7",
     "body-parser": "1.18.2",
     "dotenv": "5.0.1",
     "express": "4.16.3",
