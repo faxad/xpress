@@ -1,4 +1,4 @@
-[https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/https://cartify-backend.herokuapp.com/
+define({ "api": [
   {
     "type": "post",
     "url": "/",
