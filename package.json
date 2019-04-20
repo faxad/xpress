@@ -8,8 +8,8 @@
     "lint": "eslint ."
   },
   "apidoc": {
-    "url": "https://cartify-backend.herokuapp.com/",
-    "sampleUrl": "https://cartify-backend.herokuapp.com/"
+    "url": "https://cartify-backend.herokuapp.com",
+    "sampleUrl": "https://cartify-backend.herokuapp.com"
   },
   "author": "Fawad H Qureshi",
   "license": "MIT",
