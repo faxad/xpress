@@ -1,10 +1,10 @@
-An implementation of ReSTful web services.
+A monolithic implementation of RESTful web-services for an e-commerce portal.
 
 ### Technology Stack
 - Node JS
 - Express
 - MongoDB
-- Red Hat OpenShift 
+- Red Hat OpenShift / Heroku
 
 ### Usage & Configuration
 
