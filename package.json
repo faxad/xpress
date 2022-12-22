@@ -31,7 +31,7 @@
     "express": "4.16.4",
     "express-jwt": "5.3.1",
     "joi": "14.3.1",
-    "jsonwebtoken": "8.5.1",
+    "jsonwebtoken": "9.0.0",
     "mongodb": "2.2.33",
     "winston": "3.2.1"
   },
